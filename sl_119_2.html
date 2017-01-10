@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<script src="sources3/js/getElementsByClassName-1.0.1.js"></script> 
+	<script src="sources3/js/jquery-1.11.1.min.js"></script> 
+	<script src="sources3/js/idangerous.swiper-2.1.min.js"></script>   
+	<script src="sources3/js/hammer.js"></script>	
+	
+	<link href="sources/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="sources/jquery-3.1.1.min.js"></script> 
+	<script type="text/javascript" src="sources/app.js"></script> 	
+	<style>
+
+
+		.bg_sl_06 {
+			background-image: url(sources/images/1_Nevr/5/5_1.png);		
+		}
+
+	.btn_1 {
+		position: absolute;
+		background-image: url('sources/images/i.png');          
+		width: 45px;
+		height: 41px;
+		left: 131px;
+		top: 706px;
+		background-color: transparent;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		z-index:100;
+	}
+
+	.popup_1 {
+		position: fixed;
+		top: 635px;
+		left: 50px;
+		background-image: url(sources/images/1_Nevr/5/5_2.png); 
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 462px;
+		height: 71px;
+	}		
+
+	</style>
+</head>
+
+<body id="body" class="body" data-num="#slide3">
+	<div class="bg bg_sl_kel"></div>
+	<div class="bg bg_sl_06"></div>
+
+	
+	<!--кнопки перехода-->
+	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide06" id="btn_literature" class="btn_nav btn_literature"></a>	
+	<!-- <a href="#slide100" class="btn btn_logo"></a> -->
+
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>
+
+	<a href="#" class="btn_1 btn_popup" data-popup="popup_4"></a>
+
+	<div id="popup_4" class="popups popup_1">
+		<a href="#" class="close_popup" data-popup="popup_4"></a>
+	</div>				
+
+	<script type='text/javascript'>
+		$(function(){
+
+			var data_num = $('#body').data('num');
+			sessionStorage.setItem('num', data_num);
+
+
+			$('.btn_sl_03_1').on('click', function(){
+				$('.btn_sl_tap_1').removeClass('active');
+				$('.taps').removeClass('active');				
+				$('#btn_sl_tap_1').addClass('active');
+				$('#tap_1').addClass('active');									
+			});
+
+
+			$('.btn_sl_03_2').on('click', function(){
+				$('.man_2').delay(1000).animate({'opacity': 1}, 1000, function(){
+					$('.man_2').delay(2000).animate({'opacity': 0}, 1000);
+					$('.man_3').animate({'opacity': 1}, 1000, function(){
+						$('.man_3').delay(1000).animate({'opacity': 0}, 1000);
+						$('.man_4').animate({'opacity': 1}, 1000);
+					});
+				})
+			});
+
+
+			function addHammer(el) { 
+				var mc = new Hammer(el); 
+				mc.get('pan').set({ 
+					pointers: 2, 
+					direction: Hammer.DIRECTION_HORIZONTAL 
+				}); 
+				mc.on("panleft", function(ev) { 
+					ev.preventDefault();
+					CTAPPgoToSlide('216');	
+				}); 
+			};
+			addHammer(document.querySelector("#body"));
+
+
+
+		});
+
+
+	</script>	
+
+</body>
+</html>

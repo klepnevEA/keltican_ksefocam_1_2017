@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="sources/jquery-3.1.1.min.js"></script> 
+	<script type="text/javascript" src="sources/app.js"></script> 		
+	<style>
+
+		.bg_sl_08 {
+			background-image: url(sources/images/1_Nevr/7.png);
+		}
+
+		.bg_sl_08_kse {
+			background-image: url(sources/images/1_Nevr/8.png);			
+		}
+
+		.step_2 {
+			opacity:0;
+
+		}
+
+	</style>
+</head>
+
+<body id="body" class="body" data-num="#slide8">
+
+
+	<div class="step_2">
+		<div class="bg bg_sl_kse stap_2"></div>
+		<div class="bg bg_sl_08_kse stap_2"></div>
+
+		<!--кнопки перехода-->
+		<a href="#slide1" id="btn_home_kse" class="btn_nav btn_home_kse"></a>
+		<a href="#slide12" id="btn_literature_kse" class="btn_nav btn_literature_kse"></a>	
+		<!-- <a href="#slide100" class="btn btn_logo"></a> -->
+
+		<button data-num="home_kse" class="btn_nav btn_home_kse"></button>
+		<button data-num="literature_kse" class="btn_nav btn_literature_kse"></button>		
+	</div>				
+
+	<div class="step_1">
+		<div class="bg bg_sl_kel stap_1"></div>
+		<div class="bg bg_sl_08 stap_1"></div>
+
+		<!--кнопки перехода-->
+		<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+		<a href="#slide12" id="btn_literature" class="btn_nav btn_literature"></a>	
+		<!-- <a href="#slide100" class="btn btn_logo"></a> -->
+
+		<button data-num="home" class="btn_nav btn_home"></button>
+		<button data-num="literature" class="btn_nav btn_literature"></button>		
+	</div>	
+
+
+	<script type='text/javascript'>
+		$(function(){
+
+			var data_num = $('#body').data('num');
+			sessionStorage.setItem('num', data_num);
+
+			function startAnimation (){
+				$('.step_1').delay(1000).animate({'opacity': 0}, 1000, function(){
+					$('.step_1').css('dispaly', 'none');
+					$('.step_2').animate({'opacity': 1}, 1000);
+				})
+			};
+
+			startAnimation();
+		});
+
+
+	</script>	
+
+</body>
+</html>

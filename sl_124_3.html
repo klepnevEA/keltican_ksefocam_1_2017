@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="sources/jquery-3.1.1.min.js"></script> 
+	<script type="text/javascript" src="sources/app.js"></script> 	
+	<style>
+
+
+		.bg_sl_05 {
+			background-image: url(sources/images/1_Nevr/4/4_1.png);		
+		}
+
+		
+		.btn_sl_03 {
+			bottom: 29px;
+			left: 211px;
+			width: 250px;
+			height: 62px;
+		}	
+
+		.popups {
+			top: 40px;
+			left: 28px;
+			width: 964px;
+			height: 990px;
+		}
+
+		.close_popup {
+			width: 70px;
+			height: 70px;
+		}		
+
+		.popup_sl_05_1 {
+			background-image: url(sources/images/1_Nevr/4/4_2.png);				
+		}
+
+		.popup_sl_05_2 {
+			background-image: url(sources/images/1_Nevr/4/4_5.png);				
+		}		
+
+		.popup_sl_05_3 {
+			background-image: url(sources/images/1_Nevr/4/4_8.png);				
+		}
+
+		.btn_sl_03_1 {
+			top: 257px;
+			right: 79px;
+			width: 88px;
+			height: 75px;
+		}	
+
+		.btn_sl_03_2 {
+			top: 363px;
+			right: 79px;
+			width: 88px;
+			height: 75px;
+		}	
+
+		.btn_sl_03_3 {
+			top: 468px;
+			right: 79px;
+			width: 88px;
+			height: 75px;
+		}	
+
+		.taps {
+	    position: absolute;
+	    width: 273px;
+	    height: 405px;
+	    top: 195px;
+	    left: 295px;
+	    -webkit-background-size: 100%;
+	    background-size: 100%;
+	    background-repeat: no-repeat;
+		}
+
+		.tap_1 {
+			background-image: url(sources/images/1_Nevr/4/4_2_2.png);				
+		}
+
+		.tap_2 {
+			background-image: url(sources/images/1_Nevr/4/4_2_3.png);				
+		}	
+
+		.tap_3 {
+			background-image: url(sources/images/1_Nevr/4/4_2_4.png);				
+		}			
+
+		.btn_sl_tap {
+			position: absolute;
+    	width: 291px;
+    	height: 73px;
+			top: 96px;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+		-webkit-filter: grayscale(1);		
+		filter: grayscale(1);
+		z-index: 200;			
+		}
+
+		.btn_sl_tap.active {
+			-webkit-filter: grayscale(0);		
+			filter: grayscale(0);			
+		}
+
+		.btn_sl_tap_1 {
+			left: 33px;
+			background-image: url(sources/images/1_Nevr/4/4_2_tap_1.png);				
+		}
+
+		.btn_sl_tap_2 {
+			left: 336px;			
+			background-image: url(sources/images/1_Nevr/4/4_3_tap_2.png);				
+		}
+
+		.btn_sl_tap_3 {
+			left: 640px;				
+			background-image: url(sources/images/1_Nevr/4/4_4_tap_3.png);				
+		}	
+
+
+		.man {
+			position: absolute;
+			width: 277px;
+			height: 543px;
+    	top: 87px;
+   		left: 50px;
+		}
+
+		.man div {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+
+		.man_1 {
+			background-image: url(sources/images/1_Nevr/4/man_1.png);				
+		}
+
+		.man_2 {
+			background-image: url(sources/images/1_Nevr/4/man_2.png);
+			opacity: 0;
+		}
+
+		.man_3 {
+			background-image: url(sources/images/1_Nevr/4/man_3.png);
+			opacity: 0;
+		}
+
+		.man_4 {
+			background-image: url(sources/images/1_Nevr/4/man_4.png);
+			opacity: 0;
+		}
+
+
+		.columns {
+			position: absolute;
+    	top: 164px;
+    	left: 477px;
+    	width: 384px;
+    	height: 379px;
+		}
+
+		.columns div {
+			position: absolute;	
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			-webkit-border-radius:0 14px 0 14px;			
+			border-radius:0 14px 0 14px;					
+		}
+
+		.column_1 {
+			width: 108px;
+			height: 0px;
+			left: 100px;
+			bottom: 0;
+			background-image: url(sources/images/1_Nevr/4/4_6.png); 
+			-webkit-transition:1s ease 1s;
+			transition:1s ease 1s;
+		}
+
+		.column_2 {
+			width: 110px;
+			height: 0px;
+			left: 160px;
+			bottom: 0;
+			background-image: url(sources/images/1_Nevr/4/4_7.png); 
+			-webkit-transition:1s ease 2s;
+			transition:1s ease 2s;
+		}	
+
+		.text {
+			width: 170px;
+			height: 138px;
+			left: 170px;
+			bottom: 243px;
+			background-image: url(sources/images/1_Nevr/4/4_7_2.png); 
+			-webkit-transition:1s ease 3s;
+			transition:1s ease 3s;
+			opacity:0;
+		}
+
+		.active .column_1	{
+			height: 365px;
+		}
+
+		.active .column_2	{
+			height: 223px;
+		}
+
+		.active .text	{
+			bottom: 223px;			
+			opacity:1;
+		}	
+
+	.btn_1 {
+		position: absolute;
+		background-image: url('sources/images/i.png');          
+		width: 45px;
+		height: 41px;
+		left: 131px;
+		top: 706px;
+		background-color: transparent;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		z-index:100;
+	}
+
+	.popup_1 {
+		position: fixed;
+		top: 552px;
+		left: 50px;
+		background-image: url(sources/images/1_Nevr/4/4_9.png); 
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 940px;
+		height: 155px;
+	}		
+
+	</style>
+</head>
+
+<body id="body" class="body" data-num="#slide3">
+	<div class="bg bg_sl_kel"></div>
+	<div class="bg bg_sl_05"></div>
+	
+	<!-- 	<a href="#" class="btn btn_sl_03 btn_popup" data-popup="popup_1"></a> -->
+
+	<a href="#" class="btn btn_sl_03_1 btn_popup btn_tap" data-tap="tap_1" data-popup="popup_1"></a>
+	<a href="#" class="btn btn_sl_03_2 btn_popup btn_tap" data-tap="tap_2" data-popup="popup_2"></a>
+	<a href="#" class="btn btn_sl_03_3 btn_popup btn_tap" data-tap="tap_3" data-popup="popup_3"></a>
+
+
+
+	<div id="popup_1" class="popups popup_sl_05_1">
+		<a href="#" class="close_popup" data-popup="popup_1"></a>
+
+		<a href="#" id="btn_sl_tap_1" class="btn_sl_tap btn_sl_tap_1 btn_tap" data-tap="tap_1"></a>
+		<a href="#" id="btn_sl_tap_2" class="btn_sl_tap btn_sl_tap_2 btn_tap" data-tap="tap_2"></a>
+		<a href="#" id="btn_sl_tap_3" class="btn_sl_tap btn_sl_tap_3 btn_tap" data-tap="tap_3"></a>		
+
+		<div id="tap_1" class="taps tap_1"></div>
+		<div id="tap_2" class="taps tap_2"></div>
+		<div id="tap_3" class="taps tap_3"></div>
+	</div>
+
+	<div id="popup_2" class="popups popup_sl_05_2">
+		<a href="#" class="close_popup" data-popup="popup_2"></a>
+		<div class="man">
+			<div class="man_1"></div>
+			<div class="man_2 stap_1"></div>
+			<div class="man_3 stap_2"></div>
+			<div class="man_4 stap_3"></div>
+		</div>
+
+		<div class="columns">
+			<div class="column_1"></div>
+			<div class="column_2"></div>
+			<div class="text"></div>
+		</div>
+
+	</div>
+
+	<div id="popup_3" class="popups popup_sl_05_3">
+		<a href="#" class="close_popup" data-popup="popup_3"></a>
+
+
+	</div>
+	
+	<!--кнопки перехода-->
+	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide06" id="btn_literature" class="btn_nav btn_literature"></a>	
+	<!-- <a href="#slide100" class="btn btn_logo"></a> -->
+
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>
+
+	<a href="#" class="btn_1 btn_popup" data-popup="popup_4"></a>
+
+	<div id="popup_4" class="popups popup_1">
+		<a href="#" class="close_popup" data-popup="popup_4"></a>
+	</div>				
+
+	<script type='text/javascript'>
+		$(function(){
+
+			var data_num = $('#body').data('num');
+			sessionStorage.setItem('num', data_num);
+
+
+			$('.btn_sl_03_1').on('click', function(){
+				$('.btn_sl_tap_1').removeClass('active');
+				$('.taps').removeClass('active');				
+				$('#btn_sl_tap_1').addClass('active');
+				$('#tap_1').addClass('active');									
+			});
+
+
+			$('.btn_sl_03_2').on('click', function(){
+				$('.man_2').delay(1000).animate({'opacity': 1}, 1000, function(){
+					$('.man_2').delay(2000).animate({'opacity': 0}, 1000);
+					$('.man_3').animate({'opacity': 1}, 1000, function(){
+						$('.man_3').delay(1000).animate({'opacity': 0}, 1000);
+						$('.man_4').animate({'opacity': 1}, 1000);
+					});
+				})
+			});
+		});
+
+
+	</script>	
+
+</body>
+</html>

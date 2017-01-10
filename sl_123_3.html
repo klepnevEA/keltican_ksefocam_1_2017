@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="sources4/assets/css/vendor.css">
+	<link rel="stylesheet" href="sources4/assets/fonts/fonts.css">
+	<link rel="stylesheet" href="sources4/assets/css/main.css">
+	<link rel="stylesheet" href="sources/style.css">	
+	<script type="text/javascript" src="sources/jquery-3.1.1.min.js"></script> 	
+	<script src="sources/app.js"></script>
+	<script type="text/javascript" src="../JSLibrary/js/app.js"></script>
+	<script src="sources4/assets/js/vendor.js"></script>
+	<script src="sources4/assets/js/theme.js"></script>
+</head>
+
+<style>
+	#wrapper {
+		background-image: url(sources/images/back_kel.png);	
+	}
+
+	.bg_sl_04 {
+		background-image: url(sources/images/1_Nevr/3/3_3.png);	
+	}	
+
+	.nuc-pill {
+		top: 366px;
+		left: -24px;		
+	}
+
+	.text3 {
+		position: absolute;
+		background-image: url(sources/images/1_Nevr/3/3_6.png);	
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 346px;
+		height: 78px;
+		left: 570px;
+	}
+
+	.v3s4 ol#texts-bottom	{
+		top: 447px;		
+	}
+
+	.btn_1 {
+		position: absolute;
+		background-image: url('sources/images/i.png');          
+		width: 45px;
+		height: 41px;
+		left: 131px;
+		top: 706px;
+		background-color: transparent;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;`
+	}
+
+	.popup_1 {
+		position: fixed;
+		top: 620px;
+		left: 50px;
+		background-image: url(sources/images/1_Nevr/3/3_7.png); 
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 462px;
+		height: 72px;
+	}	
+</style>
+<body id="body" data-num="#slide4">
+	<div id="wrapper" class="v3s4 t2line">
+		<div class="bg bg_sl_04"></div>
+
+
+		<div id="main-content">
+			<!-- start content -->
+			<div id="block2" class="animated fadeIn">
+				<div class="nerv animated fadeIn"></div>
+				<div class="impulse-point animated fadeIn infinite"></div>
+				<div class="impulse-line"></div>
+				<div class="arrow-big"></div>
+				<div class="sparks"></div>
+			</div>
+
+			<div id="block1" class="animated fadeIn" style="display: none;">
+				<div class="nerv animated fadeIn"></div>
+				<div class="impulse-point animated fadeIn infinite"></div>
+				<div class="impulse-line"></div>
+				<div class="arrow-big"></div>
+			</div>
+
+			<ol id="texts-bottom" style="display: none;" type="1">
+				<div class="text3 animated fadeInUp delay-1500">
+				</div>
+
+			</ol>
+
+			<div id='nuc-drag' class="nuc-pill"></div>
+
+
+			<!-- end content -->
+		</div>
+
+
+	</div>
+
+	<a href="#" class="btn_1 btn_popup" data-popup="popup_1"></a>
+
+	<div id="popup_1" class="popups popup_1">
+		<a href="#" class="close_popup" data-popup="popup_1"></a>
+	</div>	
+
+	<!--кнопки перехода-->
+	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide06" id="btn_literature" class="btn_nav btn_literature"></a>	
+	<!-- <a href="#slide100" class="btn btn_logo"></a> -->
+
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>	
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+  <script type="text/javascript" src="sources/jquery-3.1.1.min.js"></script> 
+  <script type="text/javascript" src="sources/app.js"></script> 		
+	<style>
+
+		.bg_sl_07 {
+			opacity: 0;
+		}
+
+		.bg_sl_07_1 {
+			background-image: url(sources/images/1_Nevr/6/6_1.png);
+		}
+
+		.bg_sl_07_2 {
+			background-image: url(sources/images/1_Nevr/6/6_2.png);
+		}
+
+		.bg_sl_07_3 {
+			background-image: url(sources/images/1_Nevr/6/6_3.png);
+		}
+
+		.bg_sl_07_4 {
+			background-image: url(sources/images/1_Nevr/6/6_4.png);
+		}
+
+		.bg_sl_07.active {
+			opacity: 1;
+		} 
+
+		.stamp {
+			position: absolute;
+			top: 200px;
+			left: 200px;
+			width: 675px;
+			height: 202px;
+			background-image: url(sources/images/1_Nevr/6/6_5.png);	
+			-webkit-background-size: 100%;
+			background-size: 100%;	
+			background-repeat: no-repeat;
+			-webkit-transition: 0.5s ease 1.5s;	
+			transition: 0.5s ease 1.5s;
+			transform: rotate(10deg) scale(10, 10);
+			-webkit-transition: 0.5s ease 1.5s;
+			-webkit-transform: rotate(10deg) scale(10, 10);			
+			opacity:0;	
+		}
+
+		.stamp.active {
+			transform: rotate(-10deg) scale(1, 1);
+			-webkit-transform: rotate(-10deg) scale(1, 1);			
+			opacity:1;			
+		}			
+
+	</style>
+</head>
+
+<body id="body" class="body" data-num="#slide9">
+	<div class="bg bg_sl_kel"></div>
+	<div class="bg bg_sl_07 bg_sl_07_1 active"></div>
+	<div class="bg bg_sl_07 bg_sl_07_2"></div>
+	<div class="bg bg_sl_07 bg_sl_07_3"></div>
+	<div class="bg bg_sl_07 bg_sl_07_4"></div>
+
+	<div class="stamp"></div>	
+	
+	<!--кнопки перехода-->
+	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide12" id="btn_literature" class="btn_nav btn_literature"></a>	
+	<!-- <a href="#slide100" class="btn btn_logo"></a> -->
+
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>		
+
+	<script type='text/javascript'>
+    $(function(){
+
+      var data_num = $('#body').data('num');
+      sessionStorage.setItem('num', data_num);
+      var val_slide_7 = sessionStorage.getItem('val_slide_7');
+      $('.bg_sl_07_' + val_slide_7).addClass('active');
+
+      $('.stamp').addClass('active');
+    });
+
+
+	</script>	
+
+</body>
+</html>

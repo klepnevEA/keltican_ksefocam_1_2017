@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="sources/jquery-3.1.1.min.js"></script> 
+	<script type="text/javascript" src="sources/app.js"></script> 	
+	<style>
+
+
+		.bg_sl_218 {
+			background-image: url(sources/images/2_Ter/4/4_1.png);		
+		}
+
+		
+		.btn_sl_03 {
+			bottom: 29px;
+			left: 211px;
+			width: 250px;
+			height: 62px;
+		}	
+
+		.popups {
+			top: 40px;
+			left: 28px;
+			width: 964px;
+			height: 990px;
+		}
+
+		.close_popup {
+			width: 70px;
+			height: 70px;
+		}		
+
+		.popup_sl_218_1 {
+			background-image: url(sources/images/2_Ter/4/4_2.png);				
+		}
+
+		.popup_sl_218_2 {
+			background-image: url(sources/images/2_Ter/4/4_3.png);				
+		}		
+
+		.popup_sl_218_3 {
+			background-image: url(sources/images/2_Ter/4/4_4.png);				
+		}
+
+		.btn_sl_03_1 {
+    top: 246px;
+    right: 369px;
+    width: 285px;
+    height: 91px;
+		}	
+
+		.btn_sl_03_2 {
+    top: 524px;
+    right: 630px;
+    width: 210px;
+    height: 92px;
+		}	
+
+		.btn_sl_03_3 {
+    top: 524px;
+    right: 182px;
+    width: 426px;
+    height: 92px;
+		}	
+
+	</style>
+</head>
+
+<body id="body" class="body" data-num="#slide3">
+	<div class="bg bg_sl_kse"></div>
+	<div class="bg bg_sl_218"></div>
+	
+	<!-- 	<a href="#" class="btn btn_sl_03 btn_popup" data-popup="popup_1"></a> -->
+
+	<a href="#" class="btn btn_sl_03_1 btn_popup btn_tap" data-tap="tap_1" data-popup="popup_1"></a>
+	<a href="#" class="btn btn_sl_03_2 btn_popup btn_tap" data-tap="tap_2" data-popup="popup_2"></a>
+	<a href="#" class="btn btn_sl_03_3 btn_popup btn_tap" data-tap="tap_3" data-popup="popup_3"></a>
+
+
+
+	<div id="popup_1" class="popups popup_sl_218_1">
+		<a href="#" class="close_popup" data-popup="popup_1"></a>
+	</div>
+
+	<div id="popup_2" class="popups popup_sl_218_2">
+		<a href="#" class="close_popup" data-popup="popup_2"></a>
+	</div>
+
+	<div id="popup_3" class="popups popup_sl_218_3">
+		<a href="#" class="close_popup" data-popup="popup_3"></a>
+	</div>
+	
+		<!--кнопки перехода-->
+		<a href="#slide1" id="btn_home_kse" class="btn_nav btn_home_kse"></a>
+		<a href="#slide12" id="btn_literature_kse" class="btn_nav btn_literature_kse"></a>	
+		<!-- <a href="#slide100" class="btn btn_logo"></a> -->
+
+		<button data-num="home_kse" class="btn_nav btn_home_kse"></button>
+		<button data-num="literature_kse" class="btn_nav btn_literature_kse"></button>	
+
+	<a href="#" class="btn_1 btn_popup" data-popup="popup_4"></a>
+
+	<div id="popup_4" class="popups popup_1">
+		<a href="#" class="close_popup" data-popup="popup_4"></a>
+	</div>				
+
+	<script type='text/javascript'>
+		$(function(){
+
+			var data_num = $('#body').data('num');
+			sessionStorage.setItem('num', data_num);
+
+		});
+
+
+	</script>	
+
+</body>
+</html>

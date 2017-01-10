@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="sources/jquery-3.1.1.min.js"></script> 
+	<script type="text/javascript" src="sources/app.js"></script> 		
+	<style>
+
+		.bg_sl_10 {
+			background-image: url(sources/images/1_Nevr/10/10_1.png);
+		}
+
+		.popups {
+			top: 40px;
+			left: 28px;
+			width: 964px;
+			height: 990px;
+		}
+
+		.close_popup {
+			width: 70px;
+			height: 70px;
+		}			
+
+		.btn_sl_10_1 {
+			top: 215px;
+			right: 108px;
+			width: 195px;
+			height: 154px;
+		}	
+
+		.btn_sl_10_2 {
+    top: 382px;
+    right: 259px;
+			width: 195px;
+			height: 154px;
+		}	
+
+		.taps {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		.tap_1 {
+			background-image: url(sources/images/1_Nevr/10/10_2.png);
+		}
+
+		.tap_2 {
+			background-image: url(sources/images/1_Nevr/10/10_3.png);
+		}
+
+		.popup_sl_10_2 {
+			background-image: url(sources/images/1_Nevr/10/10_4.png);
+		}	
+
+		.btn_sl_tap {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 120px;
+			z-index: 200;
+		}	
+
+		.btn_sl_tap_1 {
+			left: 0;
+		}
+
+		.btn_sl_tap_2 {
+			right: 0;
+		}
+
+	</style>
+</head>
+
+<body id="body" class="body" data-num="#slide9">
+	<div class="bg bg_sl_kse"></div>
+	<div class="bg bg_sl_10"></div>
+
+	<a href="#" class="btn btn_sl_10_1 btn_popup" data-popup="popup_1"></a>
+	<a href="#" class="btn btn_sl_10_2 btn_popup" data-popup="popup_2"></a>
+
+	<div id="popup_1" class="popups popup_sl_10_1">
+		<a href="#" class="close_popup" data-popup="popup_1"></a>
+
+		<a href="#" id="btn_sl_tap_1" class="btn_sl_tap btn_sl_tap_1 btn_tap" data-tap="tap_1"></a>
+		<a href="#" id="btn_sl_tap_2" class="btn_sl_tap btn_sl_tap_2 btn_tap" data-tap="tap_2"></a>
+
+		<div id="tap_1" class="taps tap_1 active"></div>
+		<div id="tap_2" class="taps tap_2"></div>
+	</div>
+
+	<div id="popup_2" class="popups popup_sl_10_2">
+		<a href="#" class="close_popup" data-popup="popup_2"></a>
+	</div>	
+
+
+	
+		<!--кнопки перехода-->
+		<a href="#slide1" id="btn_home_kse" class="btn_nav btn_home_kse"></a>
+		<a href="#slide12" id="btn_literature_kse" class="btn_nav btn_literature_kse"></a>	
+		<!-- <a href="#slide100" class="btn btn_logo"></a> -->
+
+		<button data-num="home_kse" class="btn_nav btn_home_kse"></button>
+		<button data-num="literature_kse" class="btn_nav btn_literature_kse"></button>			
+
+	<script type='text/javascript'>
+		$(function(){
+
+			var data_num = $('#body').data('num');
+			sessionStorage.setItem('num', data_num);
+			var val_slide_7 = sessionStorage.getItem('val_slide_7');
+			$('.bg_sl_10_' + val_slide_7).addClass('active');
+		});
+
+
+	</script>	
+
+</body>
+</html>

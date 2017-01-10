@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'SFUIDisplay';
+	src: url('fonts/SFUIDisplay-Bold.eot');
+	src: local('☺'), url('fonts/SFUIDisplay-Bold.woff') format('woff'), url('fonts/SFUIDisplay-Bold.ttf') format('truetype'), url('fonts/SFUIDisplay-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="sources/jquery-3.1.1.min.js"></script> 
+	<script type="text/javascript" src="sources/app.js"></script> 	
+	<style>
+
+
+		.bg_sl_07 {
+			background-image: url(sources/images/Viz_2/2_1/2_1_1.png);		
+		}
+
+		.btn_sick-person {
+			position: absolute;
+			border: 1px solid red;
+			width: 199px;
+			height: 276px;
+			top: 400px;
+			left: 132px;
+			opacity: 0;
+		}
+
+		.btn_sick-person_2 {
+			left: 412px;			
+		}
+
+		.btn_sick-person_3 {
+			left: 689px;			
+		}	
+
+		.btn_check {
+			position: absolute;
+			width: 65px;
+			height: 60px;
+			top: 308px;
+			left: 216px;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-image: url(sources/images/Viz_2/2_1/2_1_3.png);	
+			border:0;
+			background-color: transparent;
+			-webkit-transition: .3s;
+			transition: .3s;				
+			-webkit-filter: grayscale(1);		
+			filter: grayscale(1);							
+		}
+
+		.btn_check_1 {
+			left: 216px;			
+		}	
+
+		.btn_check_2 {
+			left: 472px;			
+		}	
+
+		.btn_check_3 {
+			left: 756px;			
+		}	
+
+		.btn_check.active {
+			-webkit-filter: grayscale(0);		
+			filter: grayscale(0);
+			animation: go 0.3s forwards;		
+		}	
+
+		@keyframes go {
+			from {
+				-webkit-transform: scale(1, 1);
+				transform: scale(1, 1);
+			}
+			50% {
+				-webkit-transform: scale(0.8, 0.8);
+				transform: scale(0.8, 0.8);
+			-webkit-filter: grayscale(1);		
+			filter: grayscale(1);				
+			}
+			to {
+				text-shadow: 0 0 3px black;
+				-webkit-transform: scale(1, 1);
+				transform: scale(1, 1);				
+			}
+		}					
+
+
+	</style>
+</head>
+
+<body id="body" class="body" data-num="#slide7">
+	<div class="bg bg_sl_07"></div>
+
+	<button class="btn_sick-person btn_click btn_sick-person_1" type="button" data-val="1"></button>
+	<button class="btn_sick-person btn_click btn_sick-person_2" type="button" data-val="2"></button>
+	<button class="btn_sick-person btn_click btn_sick-person_3" type="button" data-val="3"></button>
+
+	<button class="btn_check btn_click btn_check_1" type="button" data-val="1"></button>
+	<button class="btn_check btn_click btn_check_2" type="button" data-val="2"></button>
+	<button class="btn_check btn_click btn_check_3" type="button" data-val="3"></button>	
+
+	
+	<!--кнопки перехода-->
+<!-- 	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide10" id="btn_literature" class="btn_nav btn_literature"></a>	
+	<a href="#slide100" class="btn btn_logo"></a>
+
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>	 -->	
+
+	<script type='text/javascript'>
+		$(function(){
+
+			var data_num = $('#body').data('num');
+			sessionStorage.setItem('num', data_num);
+
+			$('.btn_click').on('click', function(){
+				var thisVal = $(this).data('val');
+
+				$('.btn_check').removeClass('active');
+				$('.btn_check_' + thisVal).addClass('active');
+				sessionStorage.setItem('val_slide_7', thisVal);
+			});
+
+		});
+
+
+	</script>	
+
+</body>
+</html>
